@@ -37,17 +37,17 @@ int t0 = millis();
 uint8_t sys, gyro, accel, mg = 0;
 ratIMU.getCalibration(&sys, &gyro, &accel, &mg); 
 
-if (digitalRead(ledPin)){
+if (digitalRead(ledPin)) {
   LED = 1;
 }
 else {
   LED = 0;
 }
   
-if (digitalRead(soundPin)){
+if (digitalRead(soundPin)) {
   soundvar = 1;    
 }
-else{
+else {
   soundvar = 0;         
 }  
 
