@@ -37,20 +37,19 @@ int t0 = millis();
 uint8_t sys, gyro, accel, mg = 0;
 ratIMU.getCalibration(&sys, &gyro, &accel, &mg); 
 
-if (digitalRead(ledPin)) {
-    LED = 0;
-  }
+if (digitalRead(ledPin)){
+  LED = 1;
+}
 else {
-    LED = 1;
-  }
+  LED = 0;
+}
   
-int sound = digitalRead(soundPin);
-  if (sound == HIGH){
-    soundvar = 1;    
-  }
-  else{
-    soundvar = 0;         
-  }  
+if (digitalRead(soundPin)){
+  soundvar = 1;    
+}
+else{
+  soundvar = 0;         
+}  
 
 imu::Vector<3> linacc = ratIMU.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL);
 imu::Vector<3> acc = ratIMU.getVector(Adafruit_BNO055::VECTOR_ACCELEROMETER);
