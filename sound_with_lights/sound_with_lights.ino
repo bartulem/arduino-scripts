@@ -1,7 +1,7 @@
 /* 
 sound_with_lights.ino
 
-This sketch generates square wave tones with blinking LED output.
+This sketch generates square wave tones together with shining LEDs.
 
 @bartulem 2022
 */
